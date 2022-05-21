@@ -1,0 +1,19 @@
+{
+  "name": "connectmymind",
+  "version": "1.0.0",
+  "description": "Free mental health website.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albert-du/ConnectMyMind.git"
+  },
+  "author": "Alexander Bakalov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albert-du/ConnectMyMind/issues"
+  },
+  "homepage": "https://github.com/albert-du/ConnectMyMind#readme"
+}

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/albert-du/ConnectMyMind/issues"
   },
-  "homepage": "https://github.com/albert-du/ConnectMyMind#readme"
+  "homepage": "https://github.com/albert-du/ConnectMyMind#readme",
+  "dependencies": {
+    "twilio": "^3.77.1"
+  }
 }

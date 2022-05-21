@@ -3,7 +3,7 @@ const http = require('http'),
     path = require('path');
 
 const hostname = 'connectmymind.ddns.net';
-const port = 80;
+const port = 8080;
 const server = http.createServer((req, res) => {
     const { method, url } = req;
     const surl = new URL(url, 'http://connectmymind.ddns.net/');

@@ -1,3 +1,3 @@
 # ConnectMyMind
 
-## Website for mental health patiens to connect with therapists online (messaging/video) or set up meetings with local therapists.
+## Website for mental health patients to connect with therapists online (messaging/video) or set up meetings with local therapists.

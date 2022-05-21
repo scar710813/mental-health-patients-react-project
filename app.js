@@ -2,7 +2,7 @@ const http = require('http'),
     fs = require('fs'),
     path = require('path');
 
-const hostname = 'connectmymind.ddns.net';
+const hostname = '10.138.0.2';
 const port = 80;
 const server = http.createServer((req, res) => {
     const { method, url } = req;

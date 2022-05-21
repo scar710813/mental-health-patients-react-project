@@ -2,11 +2,11 @@ const http = require('http'),
     fs = require('fs'),
     path = require('path');
 
-const hostname = '34.168.155.222';
+const hostname = 'connectmymind.ddns.net';
 const port = 80;
 const server = http.createServer((req, res) => {
     const { method, url } = req;
-    const surl = new URL(url, 'http://34.168.155.222:80/');
+    const surl = new URL(url, 'http://connectmymind.ddns.net/');
     if (method == 'GET' && surl.pathname == '/') {
         fs.readFile('./client/connect-my-mind/src/app.js', function (err, html) {
             if (err) {

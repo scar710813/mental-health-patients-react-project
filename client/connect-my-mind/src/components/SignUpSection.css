@@ -29,7 +29,7 @@
     margin-top: 32px;
 }
 
-.btn1 {
+.btn11 {
     padding: 8px 20px;
     border-radius: 2px;
     margin-left: 35%;
@@ -44,7 +44,7 @@
 }
 
 
-.btn:hover {
+.btn11:hover {
     color: gray;
     transition: ease 0.3s;
 }

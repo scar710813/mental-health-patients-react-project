@@ -16,7 +16,7 @@ function SignUpSection() {
                 <label for="therapist" className='therapistLable'> Register as a therapist.</label>
                 
             </div>
-            <button className='btn1'>
+            <button className='btn11'>
                 Sign Up
             </button>
         </div>

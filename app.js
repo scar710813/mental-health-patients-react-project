@@ -1,12 +1,22 @@
 const http = require('http'),
     fs = require('fs'),
-    path = require('path');
+    path = require('path'),
+    twilioauth = require('./video-auth');
 
 const hostname = '10.138.0.2';
 const port = 80;
 const server = http.createServer((req, res) => {
     const { method, url } = req;
     const surl = new URL(url, 'http://connectmymind.ddns.net/');
+    if (method == 'GET' && surl.pathname == '/identity') {
+        let searchParams = surl.searchParams;
+        let user = searchParams.get('user');
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.write(twilioauth.getAccessToken(user));
+        res.end();
+        return;
+    }
+
     if (method == 'GET' && surl.pathname == '/favicon.ico') {
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/public/favicon.ico', function (err, html) {
             if (err) {

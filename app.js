@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
             extention = "js"
         } else if (extention == "otf") {
             oldExtention = extention;
-            extention = "oft/ia"
+            extention = "oft"
         }
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/static/' + extention + '/' + fileName, function (err, html) {
             if (err) {

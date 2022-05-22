@@ -18,7 +18,8 @@ const server = http.createServer((req, res) => {
         } else if (extention == "map" && surl.pathname.slice(-6) == "js.map") {
             oldExtention = extention
             extention = "js"
-        } else if (extention == "otf") {
+        } 
+        if (extention == "otf") {
             oldExtention = extention;
             extention = "media"
             fileName = fileName.substring(3)

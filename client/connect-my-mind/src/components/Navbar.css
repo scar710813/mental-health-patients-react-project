@@ -31,7 +31,9 @@
     font-family: thickfont;
     color: #cf40ff;
     left: 0;
-    transform: translate(25%, 50%);
+    font-size: 2.25vw;
+    margin-left: 2vw;
+    margin-top: 2vw;
   }
 
   .navbar-logo {

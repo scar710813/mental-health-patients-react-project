@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Video.css';
 import Room from './Room';
-import connect from 'twilio-video';
+const { connect } = require('twilio-video');
 
 class Video extends Component {
   constructor(props) {
@@ -21,14 +21,13 @@ class Video extends Component {
   
   async joinRoom() {
     try {
-      const resp = await fetch(`http://connectmymind.ddns.net/identity?user=${this.state.identity}`);
+      const resp = await fetch(`http://connectmymind.ddns.net/identity?user=${this.state.identity}`, {mode:'cors'});
       const data = resp.json();
       const room = await connect(data.accessToken, {
         name: 'room',
         audio: true,
         video: true
       });
-
       this.setState({ room: room });
     } catch (err) {
       console.log(err);

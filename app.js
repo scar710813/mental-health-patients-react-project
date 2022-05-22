@@ -33,7 +33,7 @@ const server = http.createServer((req, res) => {
         let searchParams = surl.searchParams;
         let user = searchParams.get('user');
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.write(twilioauth.getAccessToken(user));
+        res.write(JSON.stringify({ accessToken: twilioauth.getAccessToken(user) }));
         res.end();
         return;
     }

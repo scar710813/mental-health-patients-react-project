@@ -1,0 +1,83 @@
+.sign-container > h1 {
+    font-size: 100px;
+    position: absolute;
+    top: 200px;
+    color: rgb(0, 0, 0);
+    left: 6++0px;
+    z-index: 2;
+    margin-top: -100px;
+    font-family: thickfont;
+}
+
+.sign-container {
+    height: 100vh;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rbga(0, 0, 0, 0.2);
+    object-fit: contain;
+}
+
+@font-face {
+    font-family: thickfont;
+    src: url("MomcakeBold-WyonA.otf") format("opentype");
+}
+
+.sign-btns {
+    margin-top: 32px;
+}
+
+.sign-btns .btn {
+    margin: 6px;
+    z-index: 2;
+    position: absolute;
+    top: 540px;
+    left: 25px;
+}
+
+.userText {
+    font-family: 'thickfont';
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-top: 15vw;
+    margin-left: 35%;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(48, 48, 48);
+    border: none;
+    width: 30%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+.passText {
+    font-family: 'thickfont';
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-left: 35%;
+    padding: 1.5rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgb(48, 48, 48);
+    border: none;
+    width: 30%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+.therapistLable {
+    font-family: thickfont;
+    font-size: 2rem;
+    padding-bottom: 30px;
+}
+
+.therapistCheck {
+    margin-left: 35%;
+    margin-top: 20px;
+    width: 20px;
+    height: 20px;
+}

@@ -8,6 +8,7 @@ function HomeSection() {
         <div className='home-container'>
             <img src='/brain.gif'/>
             <h1>SEEK MENTAL HEALTH SUPPORT NOW</h1>
+            <h2>THIS PROJECT WAS CREATED FOR HIGH TECH HACKS 2022</h2>
             <p>More convenient and easy than ever!</p>
             <div className="home-btns">
                 <Button 

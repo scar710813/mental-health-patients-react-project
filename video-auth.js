@@ -9,7 +9,7 @@ const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
 const twilioApiKey = process.env.TWILIO_API_KEY;
 const twilioApiSecret = process.env.TWILIO_API_SECRET;
 
-export function getAccessToken(username){
+exports.getAccessToken = function(username){
     const identity = 'user';
     // Create Video Grant
     const videoGrant = new VideoGrant({room: username});

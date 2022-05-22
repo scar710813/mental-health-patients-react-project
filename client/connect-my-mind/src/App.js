@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/pages/Home';
 import OnlineAppointments from './components/pages/OnlineAppointments';
 import SignUp from './components/pages/SignUp';
+import LocalAppointments from './components/pages/LocalAppointments';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/onlineappointments' element={<OnlineAppointments/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
+        <Route path='/localappointments' element={<LocalAppointments/>}/>
       </Routes>
     </Router>
     </>

@@ -9,18 +9,19 @@
     top: 0;
     z-index: 999;
   }
+
+  @font-face {
+    font-family: thickfont;
+    src: url("MomcakeBold-WyonA.otf") format("opentype");
+  }
   
   .navbar-container {
     display: flex;
+    font-family: thickfont;
     justify-content: center;
     align-items: center;
     height: 80px;
     max-width: 1500px;
-  }
-  
-  @font-face {
-    font-family: thickfont;
-    src: url("thickfont.otf") format("opentype");
   }
 
   .navbar-name {
@@ -28,6 +29,7 @@
     top: 0;
     text-decoration: none;
     font-family: thickfont;
+    color: #cf40ff;
     left: 0;
     transform: translate(25%, 50%);
   }
@@ -69,6 +71,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+    font-family: thickfont;
     padding: 0.5rem 1rem;
     height: 100%;
   }
@@ -130,7 +133,7 @@
   
     @font-face {
       font-family: thickfont;
-      src: url("thickfont.otf") format("opentype");
+      src: url("MomcakeBold-WyonA.otf") format("opentype");
     }
 
     .navbar-name {
@@ -160,6 +163,7 @@
     .nav-links-mobile {
       display: block;
       text-align: center;
+      font-family: thickfont;
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;

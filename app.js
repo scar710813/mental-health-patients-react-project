@@ -92,6 +92,39 @@ const server = http.createServer((req, res) => {
         });
         return;
     }
+    if (method == 'GET' && surl.pathname == '/fontawesome.css') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/fontawesome.css', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'text/css' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
+    if (method == 'GET' && surl.pathname == '/brain.gif') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/brain.gif', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/gif' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
+    if (method == 'GET' && surl.pathname == '/thickfont.otf') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/thickfont.otf', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'application/x-font-opentype' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
     res.setHeader('Content-Type', 'text/plain');
     res.statusCode = 404;
     res.end(`Not found:`);

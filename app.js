@@ -1,11 +1,17 @@
-const http = require('http'),
+const http = require('https'),
     fs = require('fs'),
     path = require('path'),
     twilioauth = require('./video-auth');
 
 const hostname = '10.138.0.2';
-const port = 80;
-const server = http.createServer((req, res) => {
+const port = 443;
+
+const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/connectmymind.ddns.net/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/connectmymind.ddns.net/fullchain.pem')
+}
+
+const server = https.createServer((req, res) => {
     const { method, url } = req;
     const surl = new URL(url, 'http://connectmymind.ddns.net/');
     if (method == 'GET' && surl.pathname.startsWith('/static')) {

@@ -18,6 +18,20 @@
     max-width: 1500px;
   }
   
+  @font-face {
+    font-family: thickfont;
+    src: url("thickfont.otf") format("opentype");
+  }
+
+  .navbar-name {
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    font-family: thickfont;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
   .navbar-logo {
     color: #fff;
     justify-self: start;
@@ -39,6 +53,7 @@
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     list-style: none;
+    font-family: thickfont;
     text-align: center;
     width: 60vw;
     justify-content: end;
@@ -113,9 +128,16 @@
       border-radius: 0;
     }
   
-    .navbar-logo {
+    @font-face {
+      font-family: thickfont;
+      src: url("thickfont.otf") format("opentype");
+    }
+
+    .navbar-name {
       position: absolute;
       top: 0;
+      text-decoration: none;
+      font-family: thickfont;
       left: 0;
       transform: translate(25%, 50%);
     }

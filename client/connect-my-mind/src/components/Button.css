@@ -2,12 +2,18 @@
     --primary: #fff;
 }
 
+@font-face {
+    font-family: thickfont;
+    src: url("MomcakeBold-WyonA.otf") format("opentype");
+}
+
 .btn {
     padding: 8px 20px;
     border-radius: 2px;
     outline: none;
     border: none;
     cursor: pointer;
+    font-family: thickfont;
 }
 
 .btn-primary {
@@ -27,10 +33,12 @@
 .btn--medium {
     padding: 8px 20px;
     font-size: 20px;
+    margin-right: 25px;
 }
 
 .btn--large {
     padding: 12px 26px;
+    color: #fff;
     font-size: 20px;
 }
 

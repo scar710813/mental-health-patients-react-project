@@ -19,10 +19,10 @@ img {
 }
 
 .home-container > h1 {
-    color: #fff;
-    font-size: 70px;
+    font-size: 100px;
     position: absolute;
     top: 300px;
+    color: #fff;
     left: 30px;
     z-index: 2;
     margin-top: -100px;
@@ -31,9 +31,11 @@ img {
 .home-container > p {
     margin-top: 8px;
     color: #fff;
-    bottom: 300px;
-    font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 460px;
+    left: 340px;
+    z-index: 2;
+    font-size: 34px;
 }
 
 .home-btns {
@@ -42,6 +44,10 @@ img {
 
 .home-btns .btn {
     margin: 6px;
+    z-index: 2;
+    position: absolute;
+    top: 530px;
+    left: 520px;
 }
 
 @media screen and (max-width: 960px) {

@@ -125,6 +125,39 @@ const server = http.createServer((req, res) => {
         });
         return;
     }
+    if (method == 'GET' && surl.pathname == '/image1.jpeg') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/image1.jpeg', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/jpeg' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
+    if (method == 'GET' && surl.pathname == '/image2.webp') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/image2.webp', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/webp' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
+    if (method == 'GET' && surl.pathname == '/image3.jpeg') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/image3.jpeg', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/jpeg' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
     res.setHeader('Content-Type', 'text/plain');
     res.statusCode = 404;
     res.end(`Not found:`);

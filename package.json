@@ -18,6 +18,5 @@
   "homepage": "https://github.com/albert-du/ConnectMyMind#readme",
   "dependencies": {
     "react-router-dom": "^6.3.0"
-    "twilio": "^3.77.1"
   }
 }

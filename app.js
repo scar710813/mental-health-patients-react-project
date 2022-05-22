@@ -18,12 +18,21 @@ const server = http.createServer((req, res) => {
         } else if (extention == "map" && surl.pathname.slice(-6) == "js.map") {
             oldExtention = extention
             extention = "js"
+        } else if (extention == "otf") {
+            oldExtention = extention;
+            extention = "oft/ia"
         }
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/static/' + extention + '/' + fileName, function (err, html) {
             if (err) {
                 throw err;
             }
-            res.writeHead(200, { 'Content-Type': (oldExtention == undefined ? 'text/' + extention : "application/json") });
+            if (oldExtention == undefined){
+                res.writeHead(200, { 'Content-Type': 'text/' + extention});
+            } else if (oldExtention == "otf") {
+                res.writeHead(200, { 'Content-Type': 'application/x-font-opentype'});
+            } else {
+                res.writeHead(200, { 'Content-Type': 'application/json'});
+            }
             res.write(html);
             res.end();
         });

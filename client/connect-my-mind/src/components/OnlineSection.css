@@ -1,11 +1,3 @@
-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: -1;
-}
-
 .home-container {
     height: 100vh;
     width: 100%;
@@ -17,21 +9,21 @@ img {
     object-fit: contain;
 }
 
-.home-container > h1 {
-    font-size: 100px;
+.online-container > h1 {
+    font-size: 40px;
     position: absolute;
-    top: 300px;
-    color: #fff;
+    top: 200px;
+    color: rgb(0, 0, 0);
     left: 30px;
     z-index: 2;
     margin-top: -100px;
 }
 
-.home-container > p {
+.online-container > p {
     margin-top: 8px;
-    color: #fff;
+    color: rgb(0, 0, 0);
     position: absolute;
-    top: 460px;
+    top: 150px;
     left: 30px;
     z-index: 2;
     font-size: 34px;

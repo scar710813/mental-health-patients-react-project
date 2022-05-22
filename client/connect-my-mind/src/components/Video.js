@@ -23,7 +23,7 @@ class Video extends Component {
     try {
       const resp = await fetch(`http://connectmymind.ddns.net/identity?user=${this.state.identity}`, {mode:'cors'});
       const data = resp.json();
-      const room = await connect(data.accessToken, {
+      const room = await connect(data.accessToken.tostring(), {
         name: 'room',
         audio: true,
         video: true

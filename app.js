@@ -21,7 +21,7 @@ const server = http.createServer((req, res) => {
         } else if (extention == "otf") {
             oldExtention = extention;
             extention = "media"
-            fileName = fileName.substring(4)
+            fileName = fileName.substring(3)
         }
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/static/' + extention + '/' + fileName, function (err, html) {
             if (err) {

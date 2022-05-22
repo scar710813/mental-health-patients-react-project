@@ -11,7 +11,7 @@ const options = {
     cert: fs.readFileSync('/etc/letsencrypt/live/connectmymind.ddns.net/fullchain.pem')
 }
 
-const server = https.createServer((req, res) => {
+const server = https.createServer(options, function (req, res) {
     const { method, url } = req;
     const surl = new URL(url, 'http://connectmymind.ddns.net/');
     if (method == 'GET' && surl.pathname.startsWith('/static')) {

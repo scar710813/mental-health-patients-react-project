@@ -11,11 +11,19 @@ const server = http.createServer((req, res) => {
     if (method == 'GET' && surl.pathname.startsWith('/static')) {
         let fileName = surl.pathname.substring(11);
         let extention = fileName.substring(fileName.lastIndexOf('.') + 1);
+        let oldExtention;
+        if (extention == "map" && surl.pathname.slice(-6) == "ss.map") {
+            oldExtention = extention
+            extention = "css"
+        } else if (extention == "map" && surl.pathname.slice(-6) == "js.map") {
+            oldExtention = extention
+            extention = "js"
+        }
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/static/' + extention + '/' + fileName, function (err, html) {
             if (err) {
                 throw err;
             }
-            res.writeHead(200, { 'Content-Type': 'text/' + extention });
+            res.writeHead(200, { 'Content-Type': (oldExtention == undefined ? 'text/' + extention : "application/json") });
             res.write(html);
             res.end();
         });

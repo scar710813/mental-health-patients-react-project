@@ -164,6 +164,28 @@ const server = https.createServer(options, function (req, res) {
         });
         return;
     }
+    if (method == 'GET' && surl.pathname == '/logo192.png') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/logo192.png', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/png' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
+    if (method == 'GET' && surl.pathname == '/US-Blank-map.jpeg') {
+        fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/US-Blank-map.jpeg', function (err, html) {
+            if (err) {
+                throw err;
+            }
+            res.writeHead(200, { 'Content-Type': 'image/jpeg' });
+            res.write(html);
+            res.end();
+        });
+        return;
+    }
     res.setHeader('Content-Type', 'text/plain');
     res.statusCode = 404;
     res.end(`Not found:`);

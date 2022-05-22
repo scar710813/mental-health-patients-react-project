@@ -33,19 +33,21 @@
     padding: 8px 20px;
     border-radius: 2px;
     margin-left: 35%;
+    margin-top: 20px;
     width: 30%;
     font-size: 3rem;
     outline: none;
     border: none;
     cursor: pointer;
     font-family: thickfont;
-    color: rgb(214, 214, 214);
+    background: rgb(153, 153, 153);
+    color: rgb(100, 100, 100);
     border-radius: 15px;
 }
 
 
 .btn11:hover {
-    color: gray;
+    color: rgb(0, 0, 0);
     transition: ease 0.3s;
 }
 

@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
     const { method, url } = req;
     const surl = new URL(url, 'http://connectmymind.ddns.net/');
     if (method == 'GET' && surl.pathname.startsWith('/static')) {
-        let fileName = surl.pathname.substring(13);
+        let fileName = surl.pathname.substring(12);
         let extention = fileName.substring(fileName.lastIndexOf('.') + 1);
         fs.readFile('/home/alexander_i_bakalov/ConnectMyMind/ConnectMyMind/client/connect-my-mind/build/static/' + extention + fileName, function (err, html) {
             if (err) {
